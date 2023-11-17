@@ -6,7 +6,7 @@ authors = [
     {name = "Zhan Rongrui", email = "2742392377@qq.com"},
 ]
 dependencies = [
-    "pyfuture==0.0.1",
+    "pyfuture==0.0.2",
 ]
 requires-python = ">=3.8"
 readme = "README.md"
