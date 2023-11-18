@@ -12,6 +12,12 @@ requires-python = ">=3.8"
 readme = "README.md"
 license = {text = "MIT"}
 
+[project.entry-points.pdm]
+multibuild = "pdm_pyfuture.__main__:plugin"
+
+[project.entry-points."pdm.build.hook"]
+pyfuture = "pdm_pyfuture.build:PyFutureBuildHook"
+
 [tool.ruff.per-file-ignores]
 "__init__.py" = ["F401"]
 
