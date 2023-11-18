@@ -25,6 +25,6 @@ class PyFutureBuildHook:
             tgt_path = build_dir/include
             for src_file in src_path.glob("**/*.py"):
                 tgt_file = tgt_path/src_file.relative_to(src_path)
-                files[f"{tgt_path.relative_to(build_dir)}"] = tgt_file
+                files[f"{tgt_file.relative_to(build_dir)}"] = tgt_file
                 # TODO: support config target
                 transfer_file(src_file, tgt_file, target=(3, 8))

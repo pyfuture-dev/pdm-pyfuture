@@ -22,15 +22,7 @@ class MultiBuildCommand(BuildCommand):
         :param project: the pdm project instance
         :param options: the parsed Namespace object
         """
-        for k, v in project.config.items():
-            project.core.ui.echo(repr((k, v)), err=True)
-        project.core.ui.echo(repr(options), err=True)
-        project.backend.root
-        
-        # try:
-        #     subprocess.run(f"pdm {user_input}", shell=True)
-        # except KeyboardInterrupt:
-        #     project.core.ui.echo(message="Choice aborted by user.", err=True)
+        pass
 
 
 def plugin(core: Core) -> None:
