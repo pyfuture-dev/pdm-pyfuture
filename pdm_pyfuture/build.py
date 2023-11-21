@@ -9,7 +9,7 @@ class PyFutureBuildHook:
         return context.target != "sdist"
 
     def pdm_build_initialize(self, context: Context) -> None:
-        context.config.build_config["is-purelib"] = False
+        context.config.build_config["is-purelib"] = True
         config_settings = context.builder.config_settings
         config_settings[
             "--python-tag"
