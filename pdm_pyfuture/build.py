@@ -1,8 +1,11 @@
-from pdm.backend.base import Context
-from pathlib import Path
-from typing import Any
-from pyfuture.utils import transfer_file
+from __future__ import annotations
+
 import sys
+from pathlib import Path
+
+from pdm.backend.base import Context
+from pyfuture.utils import transfer_file
+
 
 class PyFutureBuildHook:
     def pdm_build_hook_enabled(self, context: Context):

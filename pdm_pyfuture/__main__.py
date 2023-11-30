@@ -1,19 +1,17 @@
-import argparse
-import readline
-import subprocess
+from __future__ import annotations
 
-from pdm.cli.commands.base import BaseCommand
+import argparse
+
 from pdm.cli.commands.build import Command as BuildCommand
 from pdm.core import Core
 from pdm.project import Project
-from pdm.cli.options import Option, global_option, project_option, verbose_option
 
 
 class MultiBuildCommand(BuildCommand):
     """
     Run a PDM script using tab completion
     """
-    
+
     name = "multibuild"
 
     def handle(self, project: Project, options: argparse.Namespace) -> None:

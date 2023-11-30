@@ -22,8 +22,29 @@ multibuild = "pdm_pyfuture.__main__:plugin"
 [project.entry-points."pdm.build.hook"]
 pyfuture = "pdm_pyfuture.build:PyFutureBuildHook"
 
-[tool.ruff.per-file-ignores]
-"__init__.py" = ["F401"]
+[tool.ruff]
+line-length = 120
+src = ["pdm_pyfuture", "tests"]
+exclude = ["tests/fixtures"]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+  "I",    # isort
+  "B",    # flake8-bugbear
+  "C4",   # flake8-comprehensions
+  "PGH",  # pygrep-hooks
+  "RUF",  # ruff
+  "W",    # pycodestyle
+  "YTT",  # flake8-2020
+]
+
+[tool.ruff.isort]
+known-first-party = ["pdm_pyfuture"]
+required-imports = ["from __future__ import annotations"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401", "I002"]
 
 [tool.pdm.version]
 source = "scm"
