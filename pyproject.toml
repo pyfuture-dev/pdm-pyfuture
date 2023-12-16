@@ -7,6 +7,7 @@ authors = [
 ]
 dependencies = [
     "pyfuture",
+    "logger"
 ]
 requires-python = ">=3.8"
 readme = "README.md"
