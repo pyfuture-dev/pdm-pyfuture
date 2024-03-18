@@ -14,7 +14,7 @@ readme = "README.md"
 license = {text = "MIT"}
 
 [project.urls]
-Homepage = "https://pypi.org/project/pdm-pyfuture"
+Homepage = "https://github.com/zrr1999/pdm-pyfuture.git"
 Repository = "https://github.com/zrr1999/pdm-pyfuture.git"
 
 [project.entry-points.pdm]
