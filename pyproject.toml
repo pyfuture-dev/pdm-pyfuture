@@ -27,7 +27,7 @@ pyfuture = "pdm_pyfuture.build:PyFutureBuildHook"
 line-length = 120
 src = ["pdm_pyfuture", "tests"]
 exclude = ["tests/fixtures"]
-target-version = "py311"
+target-version = "py310"
 
 [tool.ruff.lint]
 select = [

@@ -8,6 +8,7 @@ from typing import Sequence
 from loguru import logger
 from pdm.backend.base import Context
 from pyfuture.hooks import pdm as pyfuture_pdm_hooks
+from pyfuture.utils import get_target
 
 
 class PyFutureBuildHook:
@@ -16,7 +17,7 @@ class PyFutureBuildHook:
 
     @property
     def target(self) -> tuple[int, int]:
-        return pyfuture_pdm_hooks.get_target(self.target_str)
+        return get_target(self.target_str)
 
     def pdm_build_hook_enabled(self, context: Context):
         hook_config = pyfuture_pdm_hooks.get_hook_config(context)
